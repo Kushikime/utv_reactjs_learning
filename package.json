@@ -1,0 +1,26 @@
+{
+  "name": "utv_reactjs_learning",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kushikime/utv_reactjs_learning.git"
+  },
+  "author": "Erik Demchak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kushikime/utv_reactjs_learning/issues"
+  },
+  "homepage": "https://github.com/Kushikime/utv_reactjs_learning#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^5.5.0",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.5.5",
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.10.0"
+  }
+}
