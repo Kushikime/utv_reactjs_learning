@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import { Counter } from '../../components/Counter';
 
 interface MainPageProps {
   toggleTheme: () => void;
@@ -11,7 +10,6 @@ const MainPage: FC<MainPageProps> = ({ toggleTheme }) => {
       MAIN PAGE
       <div>
         <h1>TEST</h1>
-        <Counter />
         <button onClick={toggleTheme}>Switch theme!</button>
       </div>
     </div>

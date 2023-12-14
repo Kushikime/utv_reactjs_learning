@@ -1,3 +1,4 @@
 import ThemeProvider from './ui/ThemeProvider';
+import { Theme, ThemeContext } from './model/ThemeContext';
 
-export { ThemeProvider };
+export { ThemeProvider, Theme, ThemeContext };
