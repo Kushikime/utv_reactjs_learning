@@ -1,7 +1,13 @@
 .app.light {
-    --bg-color: rgb(255, 255, 255);
-  
-    --primary-color: rgb(0, 0, 0);
-    --secondary-color: rgb(110, 110, 110);
-  }
-  
+  --bg-color: rgb(255, 255, 255);
+
+  --primary-color: rgb(0, 0, 0);
+  --secondary-color: rgb(110, 110, 110);
+
+  // Borders
+  --border-color: rgb(219 219 219);
+  --border-size: 1px;
+  --border-style: solid;
+
+  --border: var(--border-size) var(--border-style) var(--border-color);
+}

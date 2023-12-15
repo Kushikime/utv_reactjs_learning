@@ -1,10 +1,10 @@
 import { FC } from 'react';
+import { useTheme } from 'shared/hooks';
 
-interface MainPageProps {
-  toggleTheme: () => void;
-}
+interface MainPageProps {}
 
-const MainPage: FC<MainPageProps> = ({ toggleTheme }) => {
+const MainPage: FC<MainPageProps> = () => {
+  const { toggleTheme } = useTheme();
   return (
     <div className="test">
       MAIN PAGE
