@@ -4,6 +4,7 @@
 @import 'themes/light/light.scss';
 
 .app {
+  transition: 0.3s;
   font: var(--font-m);
 
   background-color: var(--bg-color);

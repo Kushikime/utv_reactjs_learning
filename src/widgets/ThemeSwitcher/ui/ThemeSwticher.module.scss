@@ -1,0 +1,113 @@
+@keyframes reverse {
+  0% {
+    left: 10px;
+    width: 18px;
+  }
+  60% {
+    width: 12px;
+  }
+  100% {
+    left: 1px;
+  }
+}
+@keyframes switch {
+  0% {
+    left: 1%;
+  }
+  60% {
+    width: 12px;
+  }
+  100% {
+    left: 18px;
+    width: 10px;
+  }
+}
+
+.themeSwitcher {
+  --blue-background: #c2e9f6;
+  --blue-border: #72cce3;
+  --blue-color: #96dcee;
+  --yellow-background: #fffaa8;
+  --yellow-border: #f5eb71;
+  /** dark side **/
+  --indigo-background: #808fc7;
+  --indigo-border: #5d6baa;
+  --indigo-color: #6b7abb;
+  --gray-border: #e8e8ea;
+  --gray-dots: #e8e8ea;
+  /** general **/
+  --white: #fff;
+
+  .checkbox {
+    display: none;
+    &:checked + .label {
+      background: var(--indigo-color);
+      border-color: var(--indigo-border);
+    }
+    &:checked + .label:before {
+      background: var(--white);
+      border-color: var(--gray-border);
+      animation-name: switch;
+      animation-duration: 350ms;
+      animation-fill-mode: forwards;
+    }
+  }
+  .label {
+    cursor: pointer;
+    width: 36px;
+    height: 18px;
+    background: var(--blue-color);
+    border-radius: 50px;
+    border: 2px solid var(--blue-border);
+    display: flex;
+    position: relative;
+    transition: all 350ms ease-in;
+    &::before {
+      animation-name: reverse;
+      animation-duration: 350ms;
+      animation-fill-mode: forwards;
+      transition: all 350ms ease-in;
+      content: '';
+      width: 10px;
+      height: 10px;
+      border: 2px solid var(--yellow-border);
+      top: 0.5px;
+      left: 1px;
+      position: absolute;
+      border-radius: 82px;
+      background: var(--yellow-background);
+    }
+  }
+  .labelBg {
+    width: 3px;
+    height: 2px;
+    border-radius: 2px;
+    position: relative;
+    background: var(--white);
+    left: 22px;
+    top: 6px;
+    transition: all 150ms ease-in;
+    &:before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      width: 8px;
+      height: 2px;
+      border-radius: 2px;
+      background: var(--white);
+      left: -3px;
+      transition: all 150ms ease-in;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 2px;
+      width: 8px;
+      height: 2px;
+      border-radius: 2px;
+      background: var(--white);
+      left: -2px;
+      transition: all 150ms ease-in;
+    }
+  }
+}
